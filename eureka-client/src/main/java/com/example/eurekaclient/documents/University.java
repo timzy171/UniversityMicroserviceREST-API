@@ -14,7 +14,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document(value = "universities")
 public class University {
     @Id
-    private String Id;
+    private String id;
 
     private String name;
     private String type;
