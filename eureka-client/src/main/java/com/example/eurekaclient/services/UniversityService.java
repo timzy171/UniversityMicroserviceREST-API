@@ -13,5 +13,6 @@ public interface UniversityService {
     University getUniByDirector(String director);
     University getUniByAdmCommEmail(String admEmail);
     University getUniByPhoneNumber(String phoneNumber);
+    University addUni(University university);
 
 }

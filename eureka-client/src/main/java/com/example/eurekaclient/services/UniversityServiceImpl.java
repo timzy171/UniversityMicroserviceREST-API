@@ -51,4 +51,10 @@ public class UniversityServiceImpl implements UniversityService{
     public University getUniByPhoneNumber(String phoneNumber) {
         return universityRepository.findByPhoneNumber(phoneNumber);
     }
+
+    @Override
+    public University addUni(University university) {
+        universityRepository.insert(university);
+        return university;
+    }
 }
