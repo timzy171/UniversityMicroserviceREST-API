@@ -5,18 +5,32 @@ import com.example.eurekaclient.services.UniversityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+import java.util.Map;
+
 @RestController
 public class APIController {
     @Autowired
     private UniversityService universityService;
 
-    @GetMapping("/find")
-    public University getUniById(@RequestParam(name = "id") String id){
+    @GetMapping("/find/{id}")
+    public University getUniById(@PathVariable(name = "id") String id){
         return universityService.getUniById(id);
     }
 
     @PostMapping("/add")
     public University addUni(@RequestBody University university){
         return universityService.addUni(university);
+    }
+
+    @GetMapping("/find")
+    @ResponseBody
+    public List<University> getUnisByParams(@RequestParam Map<String,String> allParams){
+        return universityService.getUnisByParams(allParams);
+    }
+
+    @GetMapping("/find/all")
+    public List<University> getAllUnis(){
+        return universityService.getAllUnis();
     }
 }

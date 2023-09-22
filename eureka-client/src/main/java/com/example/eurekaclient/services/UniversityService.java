@@ -3,16 +3,12 @@ package com.example.eurekaclient.services;
 import com.example.eurekaclient.documents.University;
 
 import java.util.List;
+import java.util.Map;
 
 public interface UniversityService {
     University getUniById(String id);
-    List<University> getUnisByCity(String city);
-    List<University> getUnisByType(String type);
-    List<University> getUnisByRegion(String region);
-    University getUniByEmail(String email);
-    University getUniByDirector(String director);
-    University getUniByAdmCommEmail(String admEmail);
-    University getUniByPhoneNumber(String phoneNumber);
     University addUni(University university);
+    List<University> getAllUnis();
 
+    List<University> getUnisByParams(Map<String,String> params);
 }
