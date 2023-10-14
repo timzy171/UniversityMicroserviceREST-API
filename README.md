@@ -16,3 +16,5 @@ Mapping list:
 ![image](https://github.com/timzy171/UniversityMicroserviceREST-API/assets/115809444/d9a29fd7-af0a-4c78-8fa3-033e6db469c3)
 
 You can see all details on the `Swagger HUB` : https://app.swaggerhub.com/apis-docs/timzy171/RussianUniversitiesAPI/1.0.0
+
+For test this API you can take the database of universities : https://disk.yandex.ru/d/0XIAnlhTrWZ_3g
